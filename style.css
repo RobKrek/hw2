@@ -73,7 +73,7 @@ header {
     grid-gap: 10px;
     grid-template-areas:
         "brand brand"
-        "tools nav";
+        "tools navigacija";
 }
 
 header .tools {
@@ -215,7 +215,7 @@ footer {
     header {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
-            "brand tools nav";
+            "brand tools navigacija";
     }
 
     /* Hero korekcijas*/
