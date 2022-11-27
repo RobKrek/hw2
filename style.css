@@ -118,7 +118,7 @@ header .tools {
     width: 350px;
 }
 
-/* Main formatējums */
+/* Main sadaļas formatējums */
 main {
     background: #f7e4d4;
     padding: 10px;
@@ -156,14 +156,7 @@ main .modernisms {
     padding: 2em;
 }
 
-/* Footer formatējums */
-footer {
-    background: #f7e6d4;
-    padding: 10px;
-    grid-area: footer;
-}
-
-/* Sidebar noformējums */
+/* Sidebar sadaļas noformējums */
 .sidebar {
     background: #f7e4d4;
     padding: 10px;
@@ -175,6 +168,15 @@ footer {
     background: #fbf1e9;
     padding: 2em;
 }
+
+/* Footer formatējums */
+footer {
+    background: #f7e6d4;
+    padding: 10px;
+    grid-area: footer;
+}
+
+
 
 /* Pārējie random izmēri */
 .mobile-ad img {
