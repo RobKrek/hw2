@@ -138,6 +138,13 @@ main .biografija {
     padding: 2em;
 }
 
+.desktop-ad {
+    grid-area: ad;
+    padding: 10px;
+    background: #f7e4d4;
+    display: none;
+}
+
 main .mobile-ad {
     grid-area: ad;
     background: #f7e4d4;
@@ -156,11 +163,7 @@ footer {
     grid-area: footer;
 }
 
-/* Paslēpt mobilajos pārlūkos */
-.desktop-ad {
-    grid-area: ad;
-    display: none;
-}
+
 
 .hero .folknera_foto {
     display: none;
