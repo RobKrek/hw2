@@ -92,7 +92,7 @@ header .tools {
     grid-area: hero;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 60px;
     grid-gap: 10px;
     grid-template-areas:
         "folknera_foto"
