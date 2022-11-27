@@ -38,8 +38,7 @@ a {
 
 p {
     text-align: justify;
-   
-}
+   }
 
 ul {
     text-align: left; 
@@ -78,16 +77,6 @@ header {
         "tools nav";
 }
 
-/*header .brand {
-    background: rgb(69, 184, 255);
-    grid-area: brand;
-
-
-header nav {
-    background: rgb(69, 184, 255);
-    grid-area: nav;
-}*/
-
 header .tools {
     text-align: center;
 }
@@ -99,27 +88,30 @@ header .tools {
 
 .hero {
     background: #f7e4d4;
-    text-align: justify;
-    padding: 10px;
+    padding: 20px;
     grid-area: hero;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-template-areas:
-        "citaats";
+        "folknera_foto"
+         "citaats";
 }
 
 .hero .citaats {
     text-align: justify;
     grid-area: citaats;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .hero .folknera_foto {
     grid-area: folknera_foto;
-    
-}
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
 
 .folknera_foto img {
     width: 350px;
