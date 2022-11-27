@@ -1,6 +1,7 @@
 /* Globālais formatējums */
 * {
     font-family: Helvetica, sans-serif;
+
 }
 
 button {
@@ -66,7 +67,7 @@ header {
     padding: 10px;
     grid-area: header;
     margin-bottom: 3em;
-    border-style:dashed;
+    border-style: dashed;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,11 +88,12 @@ header .tools {
 
 .hero {
     background: #f7e4d4;
+
     padding: 20px;
     grid-area: hero;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 6px;
     grid-gap: 10px;
     grid-template-areas:
         "folknera_foto"
@@ -128,7 +130,7 @@ main {
     grid-template-areas: 
         "biografija"
         "ad"
-        "listing";
+        "modernisms";
 }
 
 main .biografija {
@@ -139,11 +141,12 @@ main .biografija {
 
 main .mobile-ad {
     grid-area: ad;
+    background: #f7e4d4;
 }
 
-main .listing {
+main .modernisms {
     background: #fbf1e9;
-    grid-area: listing;
+    grid-area: modernisms;
     padding: 2em;
 }
 
@@ -233,7 +236,7 @@ footer {
         grid-template-rows: auto 1fr;
         grid-template-areas:
             "biografija ad"
-            "listing listing";
+            "modernisms modernisms";
     }
 
     /* Sidebar korekcijas */
@@ -263,7 +266,7 @@ footer {
             grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr;
             grid-template-areas:
-                "biografija listing"
+                "biografija modernisms"
         }
     
         .mobile-ad {
