@@ -176,8 +176,6 @@ footer {
     grid-area: footer;
 }
 
-
-
 /* Reklāmas modifikācijas mobilajam */
 .mobile-ad img {
     vertical-align: top;
@@ -209,14 +207,12 @@ footer {
             "footer";
     }
 
-    /* Headera korekcijas */
     header {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
             "brand tools navigacija";
     }
 
-    /* Hero korekcijas*/
     .hero {
         grid-template-areas:
             "folknera_foto"
@@ -227,7 +223,6 @@ footer {
         display: block;
     }
 
-    /* Body korekcijas */
     main {
         grid-template-columns: 1fr 200px;
         grid-template-rows: auto 1fr;
@@ -236,7 +231,6 @@ footer {
             "modernisms modernisms";
     }
 
-    /* Sidebar korekcijas */
     .sidebar {
         display: grid;
     }
@@ -258,7 +252,6 @@ footer {
             "footer footer"
     }
 
-    /* Body korekcijas */
         main {
             grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr;
@@ -274,7 +267,6 @@ footer {
             display: block;
         }
 
-    /* Hero korekcijas */
     .hero {
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
