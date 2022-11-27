@@ -1,0 +1,292 @@
+/* Globālais formatējums */
+* {
+    font-family: Helvetica, sans-serif;
+
+}
+
+button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #560603;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+button:hover {
+    background-color: #9D2235;
+}
+
+button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+a { 
+    color: #fff;
+    text-decoration: none; 
+}
+
+p {
+    text-align: justify;
+   
+}
+
+ul {
+    text-align: left; 
+}
+
+/*Body elementi*/
+body {
+    background: #fbf2ea;
+    margin: 1em;
+    text-align: center;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 0px;
+    
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer"
+}
+
+/* Header formatējums */
+header {
+    background: #f7e6d4;
+    padding: 10px;
+    grid-area: header;
+    margin-bottom: 3em;
+    border-style:dashed;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "brand brand"
+        "tools nav";
+}
+
+/*header .brand {
+    background: rgb(69, 184, 255);
+    grid-area: brand;
+
+
+header nav {
+    background: rgb(69, 184, 255);
+    grid-area: nav;
+}*/
+
+header .tools {
+    text-align: center;
+}
+
+/* Hero sadaļas formātējums */
+#citaata_autors {
+    text-align: right;
+}
+
+.hero {
+    background: #f7e4d4;
+    text-align: justify;
+    padding: 10px;
+    grid-area: hero;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "citaats";
+}
+
+.hero .citaats {
+    text-align: justify;
+    grid-area: citaats;
+    font-size: 23px;
+}
+
+.hero .folknera_foto {
+    grid-area: folknera_foto;
+    
+}
+
+.folknera_foto img {
+    width: 350px;
+}
+
+/* Main formatējums */
+main {
+    background: #f7e4d4;
+    padding: 10px;
+    grid-area: body;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "biografija"
+        "ad"
+        "listing";
+}
+
+main .biografija {
+    background: #fbf1e9;
+    grid-area: biografija;
+    padding: 2em;
+}
+
+main .mobile-ad {
+    grid-area: ad;
+}
+
+main .listing {
+    background: #fbf1e9;
+    grid-area: listing;
+    padding: 2em;
+}
+
+/* Footer formatējums */
+footer {
+    background: #f7e6d4;
+    padding: 10px;
+    grid-area: footer;
+}
+
+/* Paslēpt mobilajos pārlūkos */
+.desktop-ad {
+    grid-area: ad;
+    display: none;
+}
+
+.hero .folknera_foto {
+    display: none;
+}
+
+/* Sidebar noformējums */
+.sidebar {
+    background: #f7e4d4;
+    padding: 10px;
+    grid-area: sidebar;
+    display: none;
+}
+
+.sidebar .feature {
+    background: #fbf1e9;
+    height: 100%;
+    padding: 2em;
+}
+
+/* Pārējie random izmēri */
+.mobile-ad img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.desktop-ad img {
+    vertical-align: top;
+    width: 350px;
+}
+
+.mobile-ad:hover {
+    opacity: 0.5;
+}
+
+.desktop-ad:hover {
+    opacity: 0.5;
+}
+
+/* Izklājums planšetei */
+@media (min-width: 576px) {
+    body {
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+            "header"
+            "hero"
+            "body"
+            "sidebar"
+            "footer";
+    }
+
+    /* Headera korekcijas */
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "brand tools nav";
+    }
+
+    /* Hero korekcijas*/
+    .hero {
+        grid-template-areas:
+            "folknera_foto"
+            "citaats";
+    }
+
+    .hero .folknera_foto {
+        display: block;
+    }
+
+    /* Body korekcijas */
+    main {
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "biografija ad"
+            "listing listing";
+    }
+
+    /* Sidebar korekcijas */
+    .sidebar {
+        display: grid;
+    }
+
+    .mobile-ad img {
+        width: 200px;
+    }
+}
+
+/* Izklājums dažādiem pārlūka loga izmēriem */
+@media (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "hero ad"
+            "body sidebar"
+            "footer footer"
+    }
+
+    /* Body korekcijas */
+        main {
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+                "biografija listing"
+        }
+    
+        .mobile-ad {
+            display: none;
+        }
+    
+        .desktop-ad {
+            display: block;
+        }
+
+    /* Hero korekcijas */
+    .hero {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "folknera_foto citaats"
+    }
+}
