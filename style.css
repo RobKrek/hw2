@@ -185,8 +185,8 @@ footer {
 }
 
 .desktop-ad img {
-    vertical-align: top;
-    width: 350px;
+    vertical-align: middle; 
+    width: 330px;
 }
 
 .mobile-ad:hover {
